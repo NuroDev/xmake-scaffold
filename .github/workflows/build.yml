@@ -1,0 +1,26 @@
+name: build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: ["windows-latest", "macos-latest", "ubuntu-latest"]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Xmake
+        uses: xmake-io/github-action-setup-xmake@v1
+        with:
+          xmake-version: latest
+
+      - name: Run Xmake Build
+        run: xmake build
