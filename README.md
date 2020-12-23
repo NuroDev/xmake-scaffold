@@ -3,7 +3,7 @@
 A minimal Xmake project template
 
 [![License](https://img.shields.io/badge/-unlicense-f56565.svg?longCache=true&style=for-the-badge)](https://github.com/nurodev/xmake-scaffold/blob/main/LICENSE)
-[![Xmake](https://img.shields.io/badge/-xmake-48bb78.svg?longCache=true&style=for-the-badge)](https://xmake.io)
+[![Xmake](https://img.shields.io/badge/-xmake-42b983.svg?longCache=true&style=for-the-badge)](https://xmake.io)
 
 ## 🦄 Usage
 
