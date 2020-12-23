@@ -12,3 +12,29 @@ Simply click the button below to get started:
 
 [![Use this template](https://img.shields.io/badge/use%20this%20template-brightgreen.svg?longCache=true&style=for-the-badge)](https://github.com/nurodev/xmake-scaffold/generate)
 
+## 🔨 Development
+
+###  📋 Requirements
+
+To setup and use the project you will need to have the following tools installed:
+ - [Git](https://git-scm.com/)
+ - [Xmake](https://xmake.io/)
+
+###  ⬇️ Installation
+
+Clone the repository
+```bash
+git clone https://github.com/nurodev/xmake-scaffold.git
+```
+Change the working directory to the newly cloned repository:
+```bash
+cd xmake-scaffold
+```
+Run xmake to install the dependencies & build the project:
+```bash
+xmake
+```
+Run the project after it has been built:
+```bash
+xmake run
+```
