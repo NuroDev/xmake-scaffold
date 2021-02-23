@@ -9,17 +9,21 @@ on:
 
 jobs:
   build:
+    name: Build - ${{ matrix.name }}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         include:
-          - os: windows-latest
+          - name: Windows (64-bit)
+            os: windows-latest
             build_path: ./build/windows/x86_64/release/
             artifact_name: my-app
-          - os: macos-latest
+          - name: macOS (64-bit)
+            os: macos-latest
             build_path: ./build/macosx/x86_64/release/
             artifact_name: my-app
-          - os: ubuntu-latest
+          - name: Ubuntu (64-bit)
+            os: ubuntu-latest
             build_path: ./build/linux/x86_64/release/
             artifact_name: my-app
           
@@ -39,4 +43,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: ${{ matrix.artifact_name }}
-          path: ${{ matrix.artifact_name }}/${{ matrix.artifact_name }}
+          path: ${{ matrix.build_path }}/${{ matrix.artifact_name }}
