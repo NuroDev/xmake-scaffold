@@ -25,7 +25,7 @@ jobs:
           - name: Ubuntu (64-bit)
             os: ubuntu-latest
             build_path: ./build/linux/x86_64/release/
-            artifact_name: my-app
+            artifact_name: my-app.exe
           
     steps:
       - name: Checkout
@@ -42,5 +42,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with:
-          name: ${{ matrix.artifact_name }}
+          name: ${{ matrix.os }}-${{ matrix.artifact_name }}
           path: ${{ matrix.build_path }}/${{ matrix.artifact_name }}
