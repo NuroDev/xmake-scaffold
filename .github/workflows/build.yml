@@ -17,7 +17,7 @@ jobs:
           - name: Windows (64-bit)
             os: windows-latest
             build_path: ./build/windows/x86_64/release/
-            artifact_name: my-app
+            artifact_name: my-app.exe
           - name: macOS (64-bit)
             os: macos-latest
             build_path: ./build/macosx/x86_64/release/
@@ -25,7 +25,7 @@ jobs:
           - name: Ubuntu (64-bit)
             os: ubuntu-latest
             build_path: ./build/linux/x86_64/release/
-            artifact_name: my-app.exe
+            artifact_name: my-app
           
     steps:
       - name: Checkout
