@@ -12,7 +12,17 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: ["windows-latest", "macos-latest", "ubuntu-latest"]
+        include:
+          - os: windows-latest
+            build_path: ./build/windows/x86_64/release/
+            artifact_name: my-app
+          - os: macos-latest
+            build_path: ./build/macosx/x86_64/release/
+            artifact_name: my-app
+          - os: ubuntu-latest
+            build_path: ./build/linux/x86_64/release/
+            artifact_name: my-app
+          
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -24,3 +34,9 @@ jobs:
 
       - name: Run Xmake Build
         run: xmake build
+        
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ matrix.artifact_name }}
+          path: ${{ matrix.artifact_name }}/${{ matrix.artifact_name }}
