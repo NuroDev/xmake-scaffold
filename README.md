@@ -2,7 +2,7 @@
 
 A minimal Xmake project template
 
-[![License](https://img.shields.io/badge/-unlicense-f56565.svg?longCache=true&style=for-the-badge)](https://github.com/nurodev/xmake-scaffold/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/-MIT-f56565.svg?longCache=true&style=for-the-badge)](https://github.com/nurodev/xmake-scaffold/blob/main/LICENSE)
 [![Build](https://img.shields.io/github/workflow/status/nurodev/xmake-scaffold/build?label=%20&logo=github&logoColor=white&style=for-the-badge)](https://github.com/NuroDev/xmake-scaffold/actions?query=workflow%3Abuild) 
 [![Xmake](https://img.shields.io/badge/-xmake-42b983.svg?longCache=true&style=for-the-badge)](https://xmake.io)
 
