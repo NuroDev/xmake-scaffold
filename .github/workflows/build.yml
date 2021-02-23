@@ -16,7 +16,7 @@ jobs:
         include:
           - name: Windows (64-bit)
             os: windows-latest
-            build_path: ./build/windows/x86_64/release/
+            build_path: ./build/windows/x64/release/
             artifact_name: my-app.exe
           - name: macOS (64-bit)
             os: macos-latest
